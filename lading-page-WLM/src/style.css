@@ -1,0 +1,444 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #c77341;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(198, 156, 109, 1);
+  border-radius: 6px;
+  border: 1px solid #da8f62;
+}
+
+/*-- Cabeçalho --*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 7px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+header.sticky {
+  background: #da8f62;
+  opacity: 0.6;
+  box-shadow: 0 5px 10px #7e543b;
+}
+
+header.sticky:hover {
+  opacity: 1;
+}
+
+header .logo {
+  position: relative;
+  font-size: 3em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Playwrite ES Deco", cursive;
+  text-shadow: 2px 2px #ff0000;
+  //font-optical-sizing: auto;
+  font-style: normal;
+  //margin-right: 100px;
+}
+
+header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin: 5px;
+}
+
+header ul li a {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: "Playwrite ES Deco", cursive;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-content: center;
+}
+
+header ul li a:hover {
+  background: rgba(215, 215, 215, 0.5);
+  text-shadow: 2px 2px #ff0000;
+  box-shadow: 0 0 10px #d7d7d7;
+}
+
+/* Inicio */
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 50px;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .bg {
+  position: relative;
+  width: 95%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Espelho de fundo*/
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.banner .bg .content {
+  width: auto;
+  height: 100%;
+}
+
+.banner .bg .content h2 {
+  font-size: 3em;
+  font-family: "Playwrite ES Deco", cursive;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.banner .bg .content h3 {
+  font-size: 1.5em;
+  color: #dbd9d9;
+  letter-spacing: 1px;
+}
+
+.banner .bg .content h6 {
+  font-size: 1em;
+  color: #dbd9d9;
+  letter-spacing: 1px;
+}
+
+.banner .bg .content p {
+  font-size: 1.5em;
+  color: #dbd9d9;
+  letter-spacing: 1px;
+}
+
+.banner .bg .content a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 20px 0;
+  background: #da8f62;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px #d7d7d7;
+}
+
+.banner .bg .content a:hover {
+  background: rgba(215, 215, 215, 0.5);
+  text-shadow: 2px 0px #ff0000;
+  box-shadow: 0 0 10px #d7d7d7;
+  transition: 0.5s;
+}
+
+.banner .bg img {
+  width: 250px;
+  padding: 2px 2px;
+}
+
+/*-- Sobre --*/
+
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .bg {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Espelho de fundo*/
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.about .bg .bgimage {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/dcompufs2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.about .bg .contentBx {
+  width: 60%;
+  height: auto;
+}
+
+.about .bg .contentBx h2 {
+  font-size: 2em;
+  font-family: "Playwrite ES Deco", cursive;
+  font-weight: 400;
+  color: #fff;
+}
+
+.about .bg .contentBx p {
+  font-size: 20px;
+  max-width: 600px;
+  text-align: left;
+  color: #fff;
+  line-break: normal;
+  letter-spacing: 1px;
+  text-indent: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.about .bg .contentBx a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 20px 0;
+  background: #da8f62;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px #d7d7d7;
+}
+
+.about .bg .contentBx a:hover {
+  background: rgba(215, 215, 215, 0.8);
+  text-shadow: 2px 1px #ff0000;
+  box-shadow: 0 0 10px #d7d7d7;
+  transition: 0.5s;
+}
+
+.about .bg img {
+  margin-bottom: 300px;
+  width: 400px;
+}
+
+/*-- Jogos --*/
+
+.games {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 12px auto;
+}
+
+.games h2 {
+  color: #fff;
+  font-size: 60px;
+  margin: 10px 0;
+  font-family: "Playwrite ES Deco", cursive;
+  font-weight: 400;
+}
+
+.games ul {
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.games ul li {
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.games ul li.active {
+  background: rgba(215, 215, 215, 0.5);
+  text-shadow: 2px 1px #ff0000;
+  box-shadow: 0 0 10px #d7d7d7;
+  transition: 0.5s;
+}
+
+.games .card8x {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.games .card8x .card {
+  width: 280px;
+  margin: 10px 20px;
+  background: rgba(255, 0, 0, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(128, 0, 0, 0.37);
+  backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.18);
+  overflow: hidden;
+}
+.games .card8x .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.games .card8x .card .content {
+  padding: 2px 5px 5px 5px;
+}
+
+.games .card8x .card .content h4 {
+  padding: 4px;
+  font-size: 1.5em;
+  font-family: "Playwrite ES Deco", cursive;
+  font-weight: 400;
+  color: #fff;
+}
+
+.games .card8x .card .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: rgba(117, 66, 36, 1);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.games .card8x .card .progress-line span {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  background: rgba(255, 207, 64, 1);
+  box-shadow: 0 0 10px rgba(255, 207, 64, 1);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.games .card8x .card .info {
+  border-top: 1.5px solid #800000;
+  padding: 10px 5px 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.games .card8x .card .info p {
+  font-size: 1.2em;
+  color: #fff;
+  line-break: auto;
+}
+
+.games .card8x .card .info p span {
+  color: #ffcf40;
+}
+.games .card8x .card .info a {
+  display: inline-block;
+  padding: 5px 5px;
+  background: #da8f62;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px #da8f62;
+}
+
+.games .card8x .card .info a:hover {
+  background: rgba(215, 215, 215, 0.5);
+  text-shadow: 2px 1px #ff0000;
+  box-shadow: 0 0 10px #d7d7d7;
+  transition: 0.5s;
+}
+
+.games .card8x .card.hide {
+  display: none;
+}
+
+/*-- Contato --*/
+.contato {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 50px;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato .bg {
+  position: relative;
+  width: 95%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Espelho de fundo*/
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/*background img talvez?*/
+.contato .bg img {
+  width: 100%;
+}
