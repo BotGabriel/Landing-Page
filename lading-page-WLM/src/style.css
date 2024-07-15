@@ -7,7 +7,8 @@
 }
 
 body {
-  background: #c77341;
+  background: url("./assets/woodbg.jpg");
+  background-repeat: repeat;
 }
 
 /* Scroll Bar */
@@ -17,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(198, 156, 109, 1);
+  background: #a8714f;
   border-radius: 6px;
   border: 1px solid #da8f62;
 }
@@ -37,7 +38,7 @@ header {
 }
 
 header.sticky {
-  background: #da8f62;
+  background: #a8714f;
   opacity: 0.6;
   box-shadow: 0 5px 10px #7e543b;
 }
@@ -49,7 +50,7 @@ header.sticky:hover {
 header .logo {
   position: relative;
   font-size: 3em;
-  font-weight: 400;
+  font-weight: 700;
   text-decoration: none;
   color: #fff;
   font-family: "Playwrite ES Deco", cursive;
@@ -101,7 +102,7 @@ header ul li a:hover {
 
 .banner .bg {
   position: relative;
-  width: 95%;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -150,7 +151,8 @@ header ul li a:hover {
   margin: 20px 0;
   background: #da8f62;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 700;
+  border: 1px solid #da8f62;
   border-radius: 5px;
   color: #fff;
   letter-spacing: 1px;
@@ -160,6 +162,7 @@ header ul li a:hover {
 .banner .bg .content a:hover {
   background: rgba(215, 215, 215, 0.5);
   text-shadow: 2px 0px #ff0000;
+  border: 1px solid transparent;
   box-shadow: 0 0 10px #d7d7d7;
   transition: 0.5s;
 }
@@ -204,34 +207,46 @@ header ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.about .bg .bgimage {
   background-image: url("./assets/dcompufs2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 10px;
+}
+.about .bg .bloco {
+  width: 80%;
+  padding: 50px;
+  height: 100%;
 }
 
 .about .bg .contentBx {
-  width: 60%;
+  width: 90%;
   height: auto;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
 }
 
 .about .bg .contentBx h2 {
   font-size: 2em;
   font-family: "Playwrite ES Deco", cursive;
-  font-weight: 400;
+  font-weight: 700;
   color: #fff;
 }
 
 .about .bg .contentBx p {
   font-size: 20px;
-  max-width: 600px;
   text-align: left;
   color: #fff;
   line-break: normal;
   letter-spacing: 1px;
   text-indent: 20px;
   backdrop-filter: blur(10px);
+  backdrop-filter: brightness(82%);
 }
 
 .about .bg .contentBx a {
@@ -240,7 +255,8 @@ header ul li a:hover {
   margin: 20px 0;
   background: #da8f62;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 700;
+  border: 1px solid #da8f62;
   border-radius: 5px;
   color: #fff;
   letter-spacing: 1px;
@@ -250,13 +266,17 @@ header ul li a:hover {
 .about .bg .contentBx a:hover {
   background: rgba(215, 215, 215, 0.8);
   text-shadow: 2px 1px #ff0000;
+  border: 1px solid transparent;
   box-shadow: 0 0 10px #d7d7d7;
   transition: 0.5s;
 }
 
 .about .bg img {
-  margin-bottom: 300px;
-  width: 400px;
+  width: 30%;
+  max-width: 260px;
+  justify-content: flex-end;
+  align-self: flex-end;
+  background: #fff;
 }
 
 /*-- Jogos --*/
@@ -277,7 +297,7 @@ header ul li a:hover {
   font-size: 60px;
   margin: 10px 0;
   font-family: "Playwrite ES Deco", cursive;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .games ul {
@@ -394,6 +414,7 @@ header ul li a:hover {
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
+  border: 1px solid #da8f62;
   border-radius: 5px;
   color: #fff;
   letter-spacing: 1px;
@@ -404,6 +425,7 @@ header ul li a:hover {
   background: rgba(215, 215, 215, 0.5);
   text-shadow: 2px 1px #ff0000;
   box-shadow: 0 0 10px #d7d7d7;
+  border: 1px solid transparent;
   transition: 0.5s;
 }
 
@@ -415,9 +437,9 @@ header ul li a:hover {
 .contato {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  margin-top: 50px;
-  padding: 50px 20px;
+  min-height: auto;
+  margin-top: 20px;
+  padding: 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,11 +447,12 @@ header ul li a:hover {
 
 .contato .bg {
   position: relative;
-  width: 95%;
-  min-height: 100vh;
+  width: 100%;
+  min-height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   /*Espelho de fundo*/
   background: rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -438,7 +461,181 @@ header ul li a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/*background img talvez?*/
-.contato .bg img {
+/*background img*/
+.contato .bg {
+  background: url("./assets/fale_conosco.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.contato .form {
+  width: 40%;
+  margin: 30px;
+}
+
+.contato .form h1 {
+  color: #fff;
+  font-family: "Playwrite ES Deco", cursive;
+}
+
+.contato .form .input8x {
+  margin: 10px 0;
+}
+
+.contato .form .input8x p {
+  color: #fff;
+  font-size: 1.4em;
+}
+
+.contato .form .input8x input,
+.contato .form .input8x textarea {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
   width: 100%;
+  color: #fff;
+  background: #da8f62;
+  min-height: 10px;
+  font-size: 1em;
+}
+
+.contato .form .input8x textarea {
+  height: 100px;
+}
+
+.contato .form .input8x input[type="submit"] {
+  display: flex;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid #da8f62;
+  text-decoration: none;
+  font-weight: 700;
+  width: 150px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.contato .form .input8x input[type="submit"]:hover {
+  background: rgba(215, 215, 215, 0.5);
+  text-shadow: 2px 1px #ff0000;
+  border: 1px solid transparent;
+  box-shadow: 0 0 10px #d7d7d7;
+  transition: 0.5s;
+}
+
+.contato .bloco {
+  width: 50%;
+  padding: 10px;
+  height: 100%;
+}
+
+/*-- footer --*/
+
+.contato footer {
+  width: 100%;
+  padding: 0px 60px;
+}
+
+.contato footer .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contato footer .info .logo {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+  text-shadow: 2px 1px #ff0000;
+  font-family: "Playwrite ES Deco", cursive;
+}
+
+.contato footer .info p {
+  color: #dbd9d9;
+}
+
+.contato footer .info ul {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato footer .info ul li {
+  list-style: none;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #da8f62;
+  background: #da8f62;
+}
+
+.contato footer .info ul li:hover {
+  background: rgba(215, 215, 215, 0.5);
+  border: 1px solid transparent;
+  box-shadow: 0 0 10px #d7d7d7;
+  transition: 0.5s;
+}
+
+.contato footer .info ul li a i {
+  font-size: 1.5em;
+  text-shadow: 2px 1px #ff0000;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 15px 40px;
+  }
+  header .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a8714f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  header .nav li {
+    margin: 20px 0;
+  }
+
+  header .nav li a {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .toggleMenu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url("./assets/menu.png");
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .toggleMenu.active {
+    background: url("./assets/close.png");
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+  }
 }

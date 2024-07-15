@@ -2,8 +2,7 @@ import './style.css';
 import miguel from './assets/Miguel.png';
 import dcomp from './assets/Dcomp.png';
 import capa from './assets/capajogo.png';
-import contatoimg from './assets/fale_conosco.jpg';
-
+import './NavBar.jsx';
 
 function App() {
   
@@ -12,6 +11,15 @@ function App() {
     var header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
   });
+
+
+  function toggleMenu(){
+    const toggleMenu = document.querySelector('.toggleMenu');
+    const nav = document.querySelector('.nav');
+    toggleMenu.classList.toggle('active')
+    nav.classList.toggle('active')
+  }
+      
 
   /* Filterable cards */
   let list = document.querySelectorAll('.list');
@@ -45,18 +53,18 @@ function App() {
       <header>
         <a href="#" className="logo">Ludii.co</a> 
         <ul className="nav">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Jogos</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#banner">Inicio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#jogos">Jogos</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
 
-        <div className="toggleMenu"></div>
+        <div className="toggleMenu" onClick= {toggleMenu()} ></div>
 
       </header>
 
       {/*-- Home Banner --*/}
-      <div className="banner">
+      <div className="banner" id="banner">
         <div className="bg">
           <div className="content">
             <h6>#1 Jogo</h6>
@@ -70,9 +78,10 @@ function App() {
       </div>
 
       {/*-- About --*/}
-      <div className="about">
+      <div className="about" id="sobre">
         <div className="bg">
           <div className="bgimage">
+            <div className="bloco"></div>
             <div className="contentBx">
               <h2>Sobre Nós</h2>
               <p>O Departamento de Computação (DComp) da Universidade Federal de Sergipe surgiu em 2009. A área de Informática foi implementada na UFS inicialmente com o curso de graduação em Informática, criado em 1990, junto ao Departamento de Estatística e Informática (DEI) – Resolução nº. 02/90/CONSU. Em 1999, o DEI passou a ser denominado de Departamento de Ciência da Computação e Estatística (DCCE) – Resolução nº. 07/99/CONSU – até o ano de 2009, quando criado o Departamento de Estatística e Ciências Atuariais e alterada a denominação do DCCE para Departamento de Computação – Resolução nº. 018/2009/CONSU. O DComp dá suporte primordialmente aos cursos de Bacharelado em Ciência da Computação, Bacharelado em Sistemas de Informação e Bacharelado em Engenharia de Computação, além da oferta de disciplinas na área de computação a diversos cursos da Universidade.</p>
@@ -85,7 +94,7 @@ function App() {
 
       {/*-- Games --*/}
 
-      <div className= "games">
+      <div className= "games" id="jogos">
         <h2>Jogos Populares</h2>
         <ul>
           <li className="list active" data-filter="all">Todos</li>
@@ -137,9 +146,8 @@ function App() {
 
       {/* Contatos */}
 
-      <div className="contato">
+      <div className="contato" id="contato">
         <div className="bg">
-          <img src={contatoimg}/>
           <div className="form">
             <h1>Fale Conosco</h1>
             <div className="input8x">
@@ -158,20 +166,25 @@ function App() {
               <input type="submit" name="Submit"/>
             </div>
           </div>
+          
+          <div className="bloco"></div>
+
+          <footer>
+            <div className="info">
+              <a href="#" className="logo">Ludii.co</a>
+              <p><i className="fa-regular fa-copyright"></i> 2024 All Rigths Reserved</p>
+              <ul>
+                <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i className="fa-brands fa-discord"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+
         </div>
       </div>
-
-
-      {/*Social
-        <div className="social">
-          <a href="#"><i className="fa-brands fa-windows"></i></a>
-          <a href="#"><i className="fa-brands fa-apple"></i></a>
-          <a href="#"><i className="fa-solid fa-n"></i></a>
-          <a href="#"><i className="fa-brands fa-android"></i></a>
-          <a href="#"><i className="fa-brands fa-playstation"></i></a>
-          <a href="#"><i className="fa-brands fa-xbox"></i></a>
-        </div>
-      */}
     </>
   )
 }
