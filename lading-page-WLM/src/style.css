@@ -107,17 +107,28 @@ header ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*Espelho de fundo*/
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(13.5px);
+  background: url("./assets/capajogo.png");
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.banner .bg .brightness {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(70%);
+  filter: drop-shadow(1px 2px 3px black);
+  border-radius: 10px;
 }
 
 .banner .bg .content {
-  width: auto;
+  width: 60%;
   height: 100%;
+  backdrop-filter: blur(px);
 }
 
 .banner .bg .content h2 {
@@ -168,7 +179,7 @@ header ul li a:hover {
 }
 
 .banner .bg img {
-  width: 250px;
+  width: 300px;
   padding: 2px 2px;
 }
 
@@ -191,12 +202,6 @@ header ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*Espelho de fundo*/
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(13.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .about .bg .bgimage {
@@ -209,13 +214,26 @@ header ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 10px;
-}
-
-.about .bg .bgimage {
   background-image: url("./assets/dcompufs2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.about .bg .bgimage .brightness {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  backdrop-filter: brightness(60%);
+}
+
+.about .bg .bgimage {
 }
 .about .bg .bloco {
   width: 80%;
@@ -245,7 +263,6 @@ header ul li a:hover {
   line-break: normal;
   letter-spacing: 1px;
   text-indent: 20px;
-  backdrop-filter: blur(10px);
   backdrop-filter: brightness(82%);
 }
 
@@ -273,10 +290,10 @@ header ul li a:hover {
 
 .about .bg img {
   width: 30%;
-  max-width: 20px;
   justify-content: flex-end;
   align-self: flex-end;
-  background: #fff;
+  background: rgb(255, 255, 255, 0.6);
+  margin-bottom: 10px;
 }
 
 /*-- Jogos --*/
@@ -294,7 +311,7 @@ header ul li a:hover {
 
 .games h2 {
   color: #fff;
-  font-size: 60px;
+  font-size: 50px;
   margin: 10px 0;
   font-family: "Playwrite ES Deco", cursive;
   font-weight: 700;
@@ -429,10 +446,6 @@ header ul li a:hover {
   transition: 0.5s;
 }
 
-.games .card8x .card.hide {
-  display: none;
-}
-
 /*-- Contato --*/
 .contato {
   position: relative;
@@ -453,12 +466,7 @@ header ul li a:hover {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  /*Espelho de fundo*/
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(13.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /*background img*/
@@ -467,7 +475,18 @@ header ul li a:hover {
   background-repeat: no-repeat;
   background-position: 70% 50%;
   background-size: cover;
-  opacity: 0.8;
+}
+
+.contato .bg .brightness {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  backdrop-filter: brightness(80%);
 }
 
 .contato .form {
@@ -595,8 +614,14 @@ header ul li a:hover {
 
 @media (max-width: 991px) {
   header {
-    padding: 15px 40px;
+    padding: 10px 40px;
   }
+
+  header .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   header .nav {
     position: fixed;
     top: 0;
@@ -604,11 +629,15 @@ header ul li a:hover {
     right: 0;
     bottom: 0;
     background: #a8714f;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 1000;
+  }
+
+  header .nav.active {
+    display: flex;
   }
 
   header .nav li {
@@ -637,5 +666,34 @@ header ul li a:hover {
     background-position: center;
     background-size: 30px;
     background-repeat: no-repeat;
+  }
+
+  .banner .bg .content h2 {
+    font-size: 2em;
+  }
+
+  .banner .bg img {
+    position: absolute;
+  }
+
+  .banner .bg .content {
+    width: 90%;
+    background: rgba(117, 66, 36, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .contato {
+    flex-direction: column;
+  }
+
+  .contato .bloco {
+    display: none;
+  }
+
+  .contato .form {
+    width: 80%;
+    margin: 30px;
   }
 }
