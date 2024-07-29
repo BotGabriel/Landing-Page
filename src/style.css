@@ -231,8 +231,6 @@ header ul li a:hover {
   backdrop-filter: brightness(60%);
 }
 
-.about .bg .bgimage {
-}
 .about .bg .bloco {
   width: 80%;
   padding: 50px;
@@ -622,6 +620,10 @@ header ul li a:hover {
 }
 
 @media (max-width: 991px) {
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+
   header {
     padding: 10px 40px;
   }
@@ -693,12 +695,34 @@ header ul li a:hover {
     z-index: 1;
   }
 
+  .about .bg .contentBx a {
+    display: flex;
+    width: 50%;
+    margin-left: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .bg .imagens {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about .bg img {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .about .bg img:nth-child(2) {
+    width: 40%;
+  }
+
   .games h2 {
-    font-size: 45px;
+    font-size: 32px;
   }
 
   .games ul {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .contato {
@@ -712,5 +736,9 @@ header ul li a:hover {
   .contato .form {
     width: 80%;
     margin: 30px;
+  }
+
+  .contato footer .info {
+    justify-content: center;
   }
 }
