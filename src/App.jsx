@@ -62,7 +62,7 @@ function App() {
     <>
       {/*Cabeçalho*/}
       <header>
-        <a href="#" className="logo">Ludii.co</a> 
+        <a href="#" className="logo">Gamber</a> 
         {stateMenu 
         ? 
           <ul className="nav" id="nav">
@@ -212,7 +212,7 @@ function App() {
 
             <footer>
               <div className="info">
-                <a href="#" className="logo">Ludii.co</a>
+                <a href="#" className="logo">Gamber</a>
                 <p><i className="fa-regular fa-copyright"></i> 2024 All Rigths Reserved</p>
                 <ul>
                   <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
