@@ -55,9 +55,7 @@ header .logo {
   color: #fff;
   font-family: "Playwrite ES Deco", cursive;
   text-shadow: 2px 2px #ff0000;
-  //font-optical-sizing: auto;
   font-style: normal;
-  //margin-right: 100px;
 }
 
 header .nav {
